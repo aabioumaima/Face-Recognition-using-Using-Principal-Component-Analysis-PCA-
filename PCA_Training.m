@@ -32,7 +32,7 @@ disp('[5/8] Calculating eigne vectors and values ...');
 [Evecm, Evalm] = eig(Q); % Getting eigen values and Eigen vectors of Cov Matrix
 
 disp('[6/8] Sorting the values and the vectors ...');
-[Evalsorted, Index] = sort(Eval, 'descen'); % Sorting eigen values
+[Evalsorted, Index] = sort(Evalm, 'descen'); % Sorting eigen values
 Evecsorted = Evecm(:, Index);
 
 disp('[7/8] Getting the PCA Matrix by selecting the first %d Vecors ...', L);
