@@ -29,6 +29,7 @@ disp('[4/8] Calculating Covariance Matrix ...');
 Q = (X'*X)/(n - 1);   % Covaraince Matrix
 
 disp('[5/8] Calculating eigne vectors and values ...');
+disp('     ---> This may take some time ...');
 [Evecm, Evalm] = eig(Q); % Getting eigen values and Eigen vectors of Cov Matrix
 
 disp('[6/8] Sorting the values and the vectors ...');
