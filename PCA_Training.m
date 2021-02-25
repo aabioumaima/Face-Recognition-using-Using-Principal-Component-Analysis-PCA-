@@ -1,5 +1,6 @@
 % MATLAB Program for Training
-M = 100; N = 90; % Required Imae Dimensions
+
+M = 25; N = 20; % Required Imae Dimensions
 TRAIN_DIR = 'data/train/';
 
 n = input('Enter No. of Images for trainig : ');
@@ -33,10 +34,10 @@ disp('     ---> This may take some time ...');
 [Evecm, Evalm] = eig(Q); % Getting eigen values and Eigen vectors of Cov Matrix
 
 disp('[6/8] Sorting the values and the vectors ...');
-[Evalsorted, Index] = sort(Evalm, 'descen'); % Sorting eigen values
+[Evalsorted, Index] = sort(Evalm, 'descend'); % Sorting eigen values
 Evecsorted = Evecm(:, Index);
 
-disp('[7/8] Getting the PCA Matrix by selecting the first %d Vecors ...', L);
+disp(strcat('[7/8] Getting the PCA Matrix by selecting the first', int2str(L), ' Vectors ...'));
 Ppca = Evecsorted(:, 1:L); % Reduced trsnformation matrix [Ppca]
 
 disp('[8/8] Projecting the images into the PCA space (X-m)*RCA ...');
