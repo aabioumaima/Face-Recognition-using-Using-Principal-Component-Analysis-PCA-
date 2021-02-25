@@ -1,6 +1,6 @@
 % MATLAB Program for Training
 
-M = 25; N = 20; % Required Imae Dimensions
+M = 25; N = 20; % Required Images Dimensions
 TRAIN_DIR = 'data/train/';
 
 n = input('Enter No. of Images for trainig : ');
